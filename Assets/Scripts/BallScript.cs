@@ -29,22 +29,51 @@ public class BallScript : MonoBehaviour
     {
         Vector3 normalHit = collision.contacts[0].normal;
         direction = Vector3.Reflect(direction, normalHit);
+
+        if(collision.gameObject.tag == "Paddle")
+        {
+            speed = speed + 0.5f;
+        }
         
         if(collision.gameObject.name == "West")
         {
             player2Score++;
-            ResetBall();
+            Debug.Log("Player 2 scored");
+            ResetBall(1);
         }
         if(collision.gameObject.name == "East")
         {
             player1Score++;
-            ResetBall();
+            Debug.Log("Player 1 scored");
+            ResetBall(-1);
+        }
+
+        if(player1Score == 11)
+        {
+            Debug.Log("Game Over, Player 1 wins");
+            ResetGame();
+        }
+
+        if(player2Score == 11)
+        {
+            Debug.Log("Game Over, Player 2 wins");
+            ResetGame();
         }
     }
 
-    void ResetBall()
+    void ResetBall(int dir)
     {
         transform.position = spawnPoint;
-        direction = new Vector3(1f, 0f, 1f);
+        speed = 5f;
+        float random = Random.Range(-1f, 1f);
+        direction = new Vector3(dir, 0f, random);
+    }
+    
+    void ResetGame()
+    {
+        player1Score = 0;
+        player2Score = 0;
+
+        ResetBall(1);
     }
 }

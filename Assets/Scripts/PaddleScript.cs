@@ -8,7 +8,7 @@ public class PaddleScript : MonoBehaviour{
     }
 
     public ControlType controls;
-    public float speed = 5f;
+    public float speed = 25f;
     private Rigidbody rb;
 
     void Start(){
