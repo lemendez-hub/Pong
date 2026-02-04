@@ -32,20 +32,20 @@ public class BallScript : MonoBehaviour
 
         if(collision.gameObject.tag == "Paddle")
         {
-            speed = speed + 0.5f;
+            speed = speed + 1;
         }
         
         if(collision.gameObject.name == "West")
         {
             player2Score++;
             Debug.Log("Player 2 scored");
-            ResetBall(1);
+            ResetBall(-1);
         }
         if(collision.gameObject.name == "East")
         {
             player1Score++;
             Debug.Log("Player 1 scored");
-            ResetBall(-1);
+            ResetBall(1);
         }
 
         if(player1Score == 11)
