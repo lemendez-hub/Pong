@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Paddle
+  - Reflection
+  - Reduction
+  - Swapped
+  - Ball
   layers:
   - Default
   - TransparentFX

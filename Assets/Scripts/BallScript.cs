@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class BallScript : MonoBehaviour
 {
-    public float speed = 5f;
-    Vector3 direction;
-    private int player1Score;
-    private int player2Score;
+    public float speed = 10f;
+    public Vector3 direction;
+    public int player1Score;
+    public int player2Score;
     public Vector3 spawnPoint;
     public Text player1Text;
     public Text player2Text; 
