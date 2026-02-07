@@ -119,6 +119,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &25682687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25682689}
+  - component: {fileID: 25682688}
+  m_Layer: 0
+  m_Name: Speed_Random
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &25682688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25682687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff3163a0d25f624c97393af468b3b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Speed_Randomizer
+  ballPrefab: {fileID: 2162049817164178566, guid: 88018f667b6a441409e66696e7f5c19b, type: 3}
+  maxSpeed: 40
+  minspeed: 1
+  seconds: 15
+  maxSeconds: 7
+--- !u!4 &25682689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25682687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40, y: 1, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &55682309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3924853373499822727, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
@@ -511,7 +560,7 @@ Transform:
   m_GameObject: {fileID: 660262052}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 20}
+  m_LocalPosition: {x: -40, y: 1, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -529,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c9bbf2afd2fdf4d87075b19824b574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Score_Swap
-  cubePrefab: {fileID: 963104819434556917, guid: 82783aac0d348dd41bbb0063a77f1223, type: 3}
+  cubePrefab: {fileID: 4100962866913652106, guid: 63c92b81baba8a54cbb1c9a191588850, type: 3}
   seconds: 15
   maxSeconds: 7
 --- !u!1 &690068905
@@ -786,7 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bdcb8c08c9f8b449ad0bb948b6b2037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball_Reflect
-  cubePrefab: {fileID: 8277421216081439156, guid: 81b15a1cda2691d45adb07da220230c2, type: 3}
+  cubePrefab: {fileID: 3660750638673156136, guid: b042fd313cde3d84885ea47efaeb77b3, type: 3}
   seconds: 15
   maxSeconds: 7
 --- !u!4 &931892091
@@ -1979,7 +2028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b864b80ecb5ed144a82ef606ff039afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Score_Reduction
-  cubePrefab: {fileID: 6162430493949496617, guid: 7e151aaee78455a478f111e6b4850287, type: 3}
+  cubePrefab: {fileID: 4371828340224013959, guid: eb6470c2e4bcadc4db5b77aa51c16e0c, type: 3}
   seconds: 15
   maxSeconds: 7
 --- !u!1 &1986134569
@@ -2180,3 +2229,4 @@ SceneRoots:
   - {fileID: 931892091}
   - {fileID: 1893368929}
   - {fileID: 660262053}
+  - {fileID: 25682689}
