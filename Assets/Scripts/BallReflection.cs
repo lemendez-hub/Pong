@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Score_Addition : MonoBehaviour
+public class BallReflection : MonoBehaviour
 {
     public GameObject cubePrefab;
     public float seconds = 15f;
@@ -16,7 +16,7 @@ public class Score_Addition : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= seconds)
+        if(timer >= seconds)
         {
             SpawnCube();
             timer = 0f;
@@ -37,18 +37,9 @@ public class Score_Addition : MonoBehaviour
         BallScript ballScript = other.gameObject.GetComponent<BallScript>();
         if (ballScript != null)
         {
-            if(ballScript.direction.x > 0)
-            {
-                ballScript.player1Score++;
-                Destroy(gameObject);
-                Debug.Log("Player 1 has been awarded a point!");
-            }
-            else if(ballScript.direction.x < 0)
-            {
-                ballScript.player2Score++;
-                Destroy(gameObject);
-                Debug.Log("Player 2 has been awarded a point!");
-            }            
+            ballScript.direction = -ballScript.direction;
+            Destroy(gameObject);
+            Debug.Log("Ball direction has been reversed!");
         }
     }
 }

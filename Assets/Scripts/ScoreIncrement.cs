@@ -1,14 +1,11 @@
 using UnityEngine;
 
-public class Speed_Randomizer : MonoBehaviour
+public class ScoreIncrement : MonoBehaviour
 {
-    public GameObject ballPrefab;
-    public float maxSpeed = 40f;
-    public float minspeed = 1f;
+    public GameObject cubePrefab;
     public float seconds = 15f;
     public float maxSeconds = 7f;
     private float timer;
-
 
     void Start()
     {
@@ -31,8 +28,8 @@ public class Speed_Randomizer : MonoBehaviour
         float randomX = Random.Range(-40.0f, 40.0f);
         float randomZ = Random.Range(-20.0f, 20.0f);
         Vector3 spawn = new Vector3(randomX, 1f, randomZ);
-        GameObject ball = Instantiate(ballPrefab, spawn, Quaternion.identity);
-        Destroy(ball, maxSeconds);
+        GameObject cube = Instantiate(cubePrefab, spawn, Quaternion.identity);
+        Destroy(cube, maxSeconds);
     }
 
     void OnTriggerEnter(Collider other)
@@ -40,13 +37,18 @@ public class Speed_Randomizer : MonoBehaviour
         BallScript ballScript = other.gameObject.GetComponent<BallScript>();
         if (ballScript != null)
         {
-            float randomSpeed = Random.Range(minspeed, maxSpeed);
-            ballScript.speed = randomSpeed;
-            Destroy(gameObject);
-            Debug.Log("Ball speed has been randomized to: " + randomSpeed);
-        }
-        {
-            
+            if(ballScript.direction.x > 0)
+            {
+                ballScript.player1Score++;
+                Destroy(gameObject);
+                Debug.Log("Player 1 has been awarded a point!");
+            }
+            else if(ballScript.direction.x < 0)
+            {
+                ballScript.player2Score++;
+                Destroy(gameObject);
+                Debug.Log("Player 2 has been awarded a point!");
+            }            
         }
     }
 }

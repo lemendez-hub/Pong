@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class Ball_Reflect : MonoBehaviour
+public class SpeedRandomizer : MonoBehaviour
 {
-    public GameObject cubePrefab;
+    public GameObject ballPrefab;
+    public float maxSpeed = 40f;
+    public float minspeed = 1f;
     public float seconds = 15f;
     public float maxSeconds = 7f;
     private float timer;
+
 
     void Start()
     {
@@ -16,7 +19,7 @@ public class Ball_Reflect : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= seconds)
+        if (timer >= seconds)
         {
             SpawnCube();
             timer = 0f;
@@ -28,8 +31,8 @@ public class Ball_Reflect : MonoBehaviour
         float randomX = Random.Range(-40.0f, 40.0f);
         float randomZ = Random.Range(-20.0f, 20.0f);
         Vector3 spawn = new Vector3(randomX, 1f, randomZ);
-        GameObject cube = Instantiate(cubePrefab, spawn, Quaternion.identity);
-        Destroy(cube, maxSeconds);
+        GameObject ball = Instantiate(ballPrefab, spawn, Quaternion.identity);
+        Destroy(ball, maxSeconds);
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,9 +40,13 @@ public class Ball_Reflect : MonoBehaviour
         BallScript ballScript = other.gameObject.GetComponent<BallScript>();
         if (ballScript != null)
         {
-            ballScript.direction = -ballScript.direction;
+            float randomSpeed = Random.Range(minspeed, maxSpeed);
+            ballScript.speed = randomSpeed;
             Destroy(gameObject);
-            Debug.Log("Ball direction has been reversed!");
+            Debug.Log("Ball speed has been randomized to: " + randomSpeed);
+        }
+        {
+            
         }
     }
 }

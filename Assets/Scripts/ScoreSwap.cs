@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Score_Swap : MonoBehaviour
+public class ScoreSwap : MonoBehaviour
 {
     public GameObject cubePrefab;
     public float seconds = 15f;
