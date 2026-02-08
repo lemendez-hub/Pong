@@ -3,27 +3,25 @@ using UnityEngine.InputSystem;
 
 public class PaddleScript : MonoBehaviour{
     public enum ControlType{
-        WS, 
-        Arrows
+        WS, Arrows
     }
-
+    
     public ControlType controls;
     public float speed = 25f;
     private Rigidbody rb;
-
+    
     void Start(){
         rb = GetComponent<Rigidbody>();
     }
-
+    
     void FixedUpdate(){
-        if(Keyboard.current == null)
-        {
+        if(Keyboard.current == null){
             return;
         }
+        
         float movementZ = 0f;
-
-        if(controls == ControlType.WS)
-        {
+        
+        if(controls == ControlType.WS){
             if(Keyboard.current.wKey.isPressed){
                 movementZ = movementZ + 1f;
             }
@@ -38,6 +36,7 @@ public class PaddleScript : MonoBehaviour{
                 movementZ = movementZ - 1f;
             }
         }
+        
         rb.linearVelocity = new Vector3(0f, 0f, movementZ * speed);
     }
 }

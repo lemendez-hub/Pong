@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 464787538864530518}
   - component: {fileID: 5159804079161646048}
   m_Layer: 0
-  m_Name: SA_Pickup
-  m_TagString: Untagged
+  m_Name: PA
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
