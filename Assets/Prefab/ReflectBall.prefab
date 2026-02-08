@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7064257798050822923}
   - component: {fileID: 6693138545508670593}
   m_Layer: 0
-  m_Name: Reflect
-  m_TagString: Untagged
+  m_Name: ReflectBall
+  m_TagString: ReflectBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

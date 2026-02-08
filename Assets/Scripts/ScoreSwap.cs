@@ -46,7 +46,7 @@ public class ScoreSwap : MonoBehaviour
             ballScript.player2Score = tempScore;
             
             
-            
+            Destroy(gameObject);
             Debug.Log("Scores have Swapped!");
         }
     }

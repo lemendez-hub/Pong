@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 25682689}
   - component: {fileID: 25682688}
   m_Layer: 0
-  m_Name: Speed_Random
+  m_Name: RandomSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 660262053}
   - component: {fileID: 660262054}
   m_Layer: 0
-  m_Name: Swap_Scores
+  m_Name: SwapScores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 690068910}
   - component: {fileID: 690068909}
   m_Layer: 0
-  m_Name: Center_Line
+  m_Name: CenterLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 931892091}
   - component: {fileID: 931892090}
   m_Layer: 0
-  m_Name: Ball_Reflect
+  m_Name: ReflectBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2094,6 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d417caefbc980584280d7f39b7b63d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallCollision
+  hitSound: {fileID: 0}
 --- !u!1 &1552350070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,7 +2391,7 @@ GameObject:
   - component: {fileID: 1893368929}
   - component: {fileID: 1893368930}
   m_Layer: 0
-  m_Name: Point_Addition
+  m_Name: IncrementPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2515,87 +2516,95 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2902ea26a8472fe46b45734fab1739f3, type: 3}
+      objectReference: {fileID: 8300000, guid: 0fadd98f764901b4981fb01042fe498e, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[0].loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[0].name
-      value: Ball_Hitting_Paddle
+      value: Ball_Paddle
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 797459893d787284aa4ac51e463153ab, type: 3}
+      objectReference: {fileID: 8300000, guid: 0f1fc24ae47109b419c0a7ca728292f8, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[1].loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[1].name
-      value: Point
+      value: BallReflection
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: dcda069e7f63c414eb0967454eafd06e, type: 3}
+      objectReference: {fileID: 8300000, guid: fd50af78cb8c7004cae9e0e53b880f8d, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[2].name
-      value: Begin
+      value: GO_Player1Wins
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: c9a909701253eff478ba0ac9cd898f9d, type: 3}
+      objectReference: {fileID: 8300000, guid: bef2dd7c355fae94b9e8ee5ebf9eafea, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[3].name
-      value: Game_Over
+      value: GO_Player2Wins
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[4].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 549555646a5e8574f9f3a40849f838a6, type: 3}
+      objectReference: {fileID: 8300000, guid: 797459893d787284aa4ac51e463153ab, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[4].name
-      value: Player2_Wins
+      value: Point
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[5].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 7fc393bac50b8d342a616606d0436a45, type: 3}
+      objectReference: {fileID: 8300000, guid: 8fa5c6a32cc82a4439360d6ad4a60c54, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[5].name
-      value: Player1_Wins
+      value: PT_Player1
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[6].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2902ea26a8472fe46b45734fab1739f3, type: 3}
+      objectReference: {fileID: 8300000, guid: d4d1b22739edb324394bab6f198dc16c, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[6].name
-      value: Ball_Hitting_Paddle
+      value: PT_Player2
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[7].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2902ea26a8472fe46b45734fab1739f3, type: 3}
+      objectReference: {fileID: 8300000, guid: 8a2a5c615b52dc342bcd504769f78209, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[7].name
-      value: Ball_Hitting_Paddle
+      value: RandomSpeed
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[8].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2902ea26a8472fe46b45734fab1739f3, type: 3}
+      objectReference: {fileID: 8300000, guid: caa2d7049b5d2c7449df8b8d091f89a7, type: 3}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[8].name
-      value: Ball_Hitting_Paddle
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b763edf41f2b3a3439f7d989a2725f72, type: 3}
+    - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: SwappingScores
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[0].pitch
@@ -2623,15 +2632,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[6].pitch
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[7].pitch
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[8].pitch
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
+      propertyPath: sounds.Array.data[9].pitch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[0].volume
@@ -2667,6 +2680,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
       propertyPath: sounds.Array.data[8].volume
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 362452885730540983, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
+      propertyPath: sounds.Array.data[9].volume
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3785131781703066884, guid: b233ad733287f8b4593cb614eeaaf38e, type: 3}
@@ -2733,7 +2750,7 @@ SceneRoots:
   - {fileID: 1544890467}
   - {fileID: 993786335}
   - {fileID: 1986134572}
-  - {fileID: 931892091}
   - {fileID: 1893368929}
   - {fileID: 660262053}
   - {fileID: 25682689}
+  - {fileID: 931892091}

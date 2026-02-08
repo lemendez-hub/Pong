@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Point_Addition
+  - IncrementPoint
+  - SwapScores
+  - RandomSpeed
+  - ReflectBall
   layers:
   - Default
   - TransparentFX
