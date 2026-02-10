@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Menu.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/ExplainPong.unity
+    guid: a3e10d8ba5d74aa42a1190870d0f23d6
+  - enabled: 1
+    path: Assets/Scenes/ExplainPong_AI.unity
+    guid: 5b5be2e272b7738419fc5860668e82a4
+  - enabled: 1
+    path: Assets/Scenes/Pong.unity
+    guid: 067da7d5ec173de478798b42a8b1ee1c
+  - enabled: 1
+    path: Assets/Scenes/Pong_AI.unity
+    guid: a04f74757c20dbf41840598d38bc1e86
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

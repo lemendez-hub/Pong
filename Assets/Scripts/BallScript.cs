@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class BallScript : MonoBehaviour{
@@ -14,13 +15,11 @@ public class BallScript : MonoBehaviour{
     public Text player1Text;
     public Text player2Text;
 
-    public Text beginning;
     
     void Start()
     {
         player1Score = 0;
         player2Score = 0;
-        AudioManager.instance.Play("Start");
         direction = new Vector3(1f, 0f, 1f);
     }
     
@@ -49,7 +48,17 @@ public class BallScript : MonoBehaviour{
             player2Text.color = Color.green;
         }
 
-
+        if (BallCollision.FindFirstObjectByType<BallCollision>().isGameOver)
+        {
+            if (Keyboard.current.spaceKey.isPressed)
+            {
+                BallCollision.FindFirstObjectByType<BallCollision>().gameOver.gameObject.SetActive(false);
+                BallCollision.FindFirstObjectByType<BallCollision>().isGameOver = false;
+                BallCollision.FindFirstObjectByType<BallCollision>().retry.gameObject.SetActive(false);
+                ResetGame();
+            }
+            return;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
