@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Speed_Randomizer
   ballPrefab: {fileID: 2162049817164178566, guid: 88018f667b6a441409e66696e7f5c19b, type: 3}
   maxSpeed: 40
-  minspeed: 1
+  minSpeed: 1
   seconds: 15
   maxSeconds: 7
 --- !u!4 &25682689
@@ -3005,7 +3005,6 @@ MonoBehaviour:
   direction: {x: 0, y: 1.8, z: 0}
   player1Score: 0
   player2Score: 0
-  spawnPoint: {x: 0, y: 0, z: 0}
   player1Text: {fileID: 981468784}
   player2Text: {fileID: 1060349783}
 --- !u!54 &1544890463
@@ -3774,18 +3773,18 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 4893340556322413083}
-  - {fileID: 545234754}
   - {fileID: 1836556802}
+  - {fileID: 545234754}
   - {fileID: 794804312}
   - {fileID: 1308665638}
   - {fileID: 1055507139}
+  - {fileID: 1544890467}
   - {fileID: 948238118}
   - {fileID: 690068912}
-  - {fileID: 1544890467}
-  - {fileID: 993786335}
-  - {fileID: 1986134572}
+  - {fileID: 1120538516}
   - {fileID: 1893368929}
-  - {fileID: 660262053}
   - {fileID: 25682689}
   - {fileID: 931892091}
-  - {fileID: 1120538516}
+  - {fileID: 660262053}
+  - {fileID: 993786335}
+  - {fileID: 1986134572}

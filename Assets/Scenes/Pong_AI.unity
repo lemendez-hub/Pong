@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 226955928}
   - component: {fileID: 226955927}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,7 +736,6 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   player1Score: 0
   player2Score: 0
-  spawnPoint: {x: 0, y: 1.8, z: 0}
   player1Text: {fileID: 5430379}
   player2Text: {fileID: 507679767}
 --- !u!54 &229853443
@@ -871,7 +870,7 @@ GameObject:
   - component: {fileID: 267660093}
   - component: {fileID: 267660092}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2886,7 +2885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Speed_Randomizer
   ballPrefab: {fileID: 2162049817164178566, guid: 88018f667b6a441409e66696e7f5c19b, type: 3}
   maxSpeed: 40
-  minspeed: 1
+  minSpeed: 1
   seconds: 15
   maxSeconds: 7
 --- !u!4 &1540366148
@@ -3805,19 +3804,19 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1194726778}
-  - {fileID: 135038143}
-  - {fileID: 267660094}
-  - {fileID: 229853447}
-  - {fileID: 2138204820}
-  - {fileID: 735876404}
-  - {fileID: 1266551149}
-  - {fileID: 1449683547}
-  - {fileID: 1351868507}
-  - {fileID: 1697992143}
-  - {fileID: 1044676434}
-  - {fileID: 907418990}
-  - {fileID: 226955930}
-  - {fileID: 1540366148}
   - {fileID: 1789681358}
+  - {fileID: 267660094}
+  - {fileID: 226955930}
+  - {fileID: 1697992143}
+  - {fileID: 735876404}
+  - {fileID: 2138204820}
+  - {fileID: 229853447}
+  - {fileID: 1449683547}
+  - {fileID: 1044676434}
   - {fileID: 197170679}
+  - {fileID: 135038143}
+  - {fileID: 1540366148}
+  - {fileID: 1351868507}
+  - {fileID: 907418990}
+  - {fileID: 1266551149}
+  - {fileID: 1194726778}
