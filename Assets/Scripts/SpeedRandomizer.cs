@@ -30,7 +30,7 @@ public class SpeedRandomizer : MonoBehaviour
     {
         float randomX = Random.Range(-40.0f, 40.0f);
         float randomZ = Random.Range(-20.0f, 20.0f);
-        Vector3 spawn = new Vector3(randomX, 1f, randomZ);
+        Vector3 spawn = new Vector3(randomX, -0.5f, randomZ);
         GameObject ball = Instantiate(ballPrefab, spawn, Quaternion.identity);
         Destroy(ball, maxSeconds);
     }

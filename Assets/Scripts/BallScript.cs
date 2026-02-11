@@ -10,7 +10,7 @@ public class BallScript : MonoBehaviour{
     public int player1Score;
     public int player2Score;
     
-    public Vector3 spawnPoint;
+    //public Vector3 spawnPoint;
     
     public Text player1Text;
     public Text player2Text;
@@ -69,7 +69,7 @@ public class BallScript : MonoBehaviour{
 
     public void ResetBall(int dir)
     {
-        transform.position = spawnPoint;
+        transform.position = new Vector3(0f, 1.8f, 0f);
         speed = 10f;
 
         if (BallCollision.FindFirstObjectByType<BallCollision>().hitSound != null)
